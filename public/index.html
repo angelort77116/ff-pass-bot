@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FF Pass Bot | Painel do Dono</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="login-view" class="screen">
+    <div class="card login-card">
+      <p class="kicker">Painel do dono</p>
+      <h1>FF Pass Bot</h1>
+      <p class="muted">Entre com o PIN para alterar valor, PIX, toque e ligar o WhatsApp.</p>
+      <form id="login-form">
+        <label>PIN do dono</label>
+        <input id="pin" type="password" inputmode="numeric" placeholder="1805" required />
+        <button type="submit">Entrar</button>
+        <p id="login-error" class="error"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="app-view" class="screen hidden">
+    <header>
+      <div>
+        <p class="kicker">Dono 5569993841805</p>
+        <h1 id="bot-title">FF Pass Bot</h1>
+      </div>
+      <div class="status-box">
+        <span id="conn-dot" class="dot"></span>
+        <span id="conn-text">Desconectado</span>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Conectar por codigo</h2>
+        <p class="muted">So funciona com codigo de pareamento no numero <strong>556593511752</strong>.</p>
+        <div class="pair-box">
+          <p>Codigo de pareamento</p>
+          <strong id="pair-code">------</strong>
+        </div>
+        <p id="pair-error" class="error"></p>
+        <div class="row">
+          <button id="btn-connect" type="button">Gerar codigo</button>
+          <button id="btn-copy" class="ghost" type="button">Copiar codigo</button>
+          <button id="btn-logout" class="ghost" type="button">Desconectar</button>
+        </div>
+        <p id="connect-hint" class="muted">No celular 556593511752: WhatsApp &gt; Aparelhos conectados &gt; Conectar um aparelho &gt; Conectar com numero de telefone &gt; colar este codigo.</p>
+      </article>
+
+      <article class="card">
+        <h2>Configuracoes tradicionais</h2>
+        <form id="config-form" class="form-grid">
+          <label>Nome do bot<input name="botName" /></label>
+          <label>Numero do bot<input name="botNumber" /></label>
+          <label>Numero do dono<input name="ownerNumber" /></label>
+          <label>Nome do passe<input name="passName" /></label>
+          <label>Valor do passe<input name="passPrice" /></label>
+          <label>Duracao<input name="passDuration" /></label>
+          <label>Chave PIX<input name="pixKey" /></label>
+          <label>Tipo PIX<input name="pixType" /></label>
+          <label>Nome PIX<input name="pixName" /></label>
+          <label>PIN do painel<input name="panelPin" /></label>
+          <label class="check"><input type="checkbox" name="botActive" /> Bot ligado</label>
+          <label class="check"><input type="checkbox" name="autoSend" /> Envio automatico</label>
+          <label class="full">Mensagem do passe<textarea name="passMessage" rows="6"></textarea></label>
+          <label class="full">Mensagem de boas-vindas<textarea name="welcomeMessage" rows="5"></textarea></label>
+          <button type="submit">Salvar alteracoes</button>
+        </form>
+        <p id="save-msg" class="ok"></p>
+      </article>
+    </section>
+
+    <article class="card">
+      <h2>Pedidos /passe+id</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Pedido</th>
+              <th>ID FF</th>
+              <th>Cliente</th>
+              <th>Valor</th>
+              <th>Status</th>
+              <th>Acao</th>
+            </tr>
+          </thead>
+          <tbody id="orders-body">
+            <tr><td colspan="6">Nenhum pedido ainda.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

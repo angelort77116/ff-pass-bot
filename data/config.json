@@ -1,0 +1,19 @@
+{
+  "botName": "FF Pass Bot",
+  "botNumber": "556593511752",
+  "ownerNumber": "5569993841805",
+  "panelPin": "1805",
+  "botActive": true,
+  "autoSend": true,
+  "passName": "Passe Booyah Free Fire",
+  "passPrice": "29.90",
+  "passDuration": "30 dias",
+  "pixKey": "5569993841805",
+  "pixType": "TELEFONE",
+  "pixName": "Dono FF Pass",
+  "support": "5569993841805",
+  "welcomeMessage": "Ola! Sou o *{bot}*.\n\nPara receber o passe automatico, envie:\n*/passe+SEU_ID*\n\nExemplo: /passe+123456789\n\nValor: R$ {valor}\nPasse: {passe}",
+  "passMessage": "*PEDIDO CONFIRMADO*\n\nPasse: {passe}\nID Free Fire: {id}\nValor: R$ {valor}\nDuracao: {duracao}\n\n*PAGAMENTO PIX*\nTipo: {pixTipo}\nChave: {pix}\nNome: {pixNome}\n\nAssim que o pagamento cair, o passe e aplicado no ID informado.\n\nPedido: {pedido}",
+  "ownerMenu": "*PAINEL DONO - {bot}*\n\n1. Alterar valor do passe\n2. Alterar nome do passe\n3. Alterar chave PIX\n4. Alterar nome PIX\n5. Ligar/Desligar bot\n6. Ligar/Desligar envio automatico\n7. Ver pedidos\n8. Ver configuracoes\n9. Alterar PIN do painel\n\nToque e responda o numero, ou use o painel web.",
+  "offlineMessage": "Bot temporariamente desligado. Tente novamente mais tarde."
+}
